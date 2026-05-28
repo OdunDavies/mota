@@ -1,6 +1,4 @@
 {
   "installCommand": "cd ../.. && pnpm install",
-  "buildCommand": "cd ../.. && pnpm build --filter=corporate",
-  "outputDirectory": ".next",
   "framework": "nextjs"
 }
