@@ -1,0 +1,22 @@
+{
+  "name": "@sarkimota/auth",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.ts",
+  "types": "index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./client": "./client.ts",
+    "./server": "./server.ts",
+    "./middleware": "./middleware.ts"
+  },
+  "dependencies": {
+    "@sarkimota/database": "workspace:*",
+    "@supabase/supabase-js": "^2.42.0",
+    "@supabase/ssr": "^0.1.0",
+    "react": "^18.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0"
+  }
+}

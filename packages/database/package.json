@@ -1,0 +1,16 @@
+{
+  "name": "@sarkimota/database",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.ts",
+  "types": "index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./schema": "./src/schema.ts",
+    "./repositories": "./src/repositories/index.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.42.0",
+    "zod": "^3.22.0"
+  }
+}

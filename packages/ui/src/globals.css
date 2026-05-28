@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+@layer base {
+  :root {
+    --background: 40 23% 95%;
+    --foreground: 0 0% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 4%;
+    --primary: 38 44% 61%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 40 23% 92%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 40 23% 92%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 38 44% 61%;
+    --accent-foreground: 0 0% 4%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 38 20% 85%;
+    --input: 38 20% 85%;
+    --ring: 38 44% 61%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 38 44% 61%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 9%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 38 44% 61%;
+    --accent-foreground: 0 0% 4%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 38 44% 61%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  ::selection {
+    @apply bg-gold-400/30 text-sarkimota-black;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .bg-grid {
+    background-image: linear-gradient(rgba(201, 169, 110, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201, 169, 110, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .bg-shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(201, 169, 110, 0.05) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite linear;
+  }
+
+  .glass {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10;
+  }
+
+  .glass-dark {
+    @apply backdrop-blur-xl bg-sarkimota-black/80 border border-white/10;
+  }
+
+  .gold-gradient {
+    @apply bg-gradient-to-r from-gold-400 via-gold-300 to-gold-500 bg-clip-text text-transparent;
+  }
+}

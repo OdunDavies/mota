@@ -1,0 +1,26 @@
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+additional_redirect_urls = [
+  "http://localhost:3001",
+  "http://localhost:3002",
+  "http://localhost:3003",
+  "http://localhost:3004",
+]
+jwt_expiry = 3600
+enable_signup = true
+
+[edge_runtime]
+policy = "per_worker"
+
+[api]
+enabled = true
+port = 54321
+
+[analytics]
+enabled = true
+port = 54327
+
+[storage]
+enabled = true
+file_size_limit = "50MB"
