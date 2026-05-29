@@ -26,8 +26,8 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold tracking-wide mb-4">Contact</h4>
             <ul className="space-y-3">
-              <li className="text-sm text-white/50">10 Bishop Aboyade Cole Street</li>
-              <li className="text-sm text-white/50">Victoria Island, Lagos</li>
+              <li className="text-sm text-white/50">Olusegun Obasanjo Way, Central Business District</li>
+              <li className="text-sm text-white/50">Abuja 900103, FCT</li>
               <li className="text-sm text-white/50">+234 800 SARKI INTERIOR</li>
               <li className="text-sm text-white/50">interiors@sarkimota.com</li>
             </ul>

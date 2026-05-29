@@ -87,7 +87,7 @@ export function SubsidiaryShowcase() {
                   ))}
                 </div>
 
-                <Link href={sub.href}>
+                <Link href={sub.href} target="_blank" rel="noopener noreferrer">
                   <Button variant="gold">Explore {sub.name.split(' ')[1]}</Button>
                 </Link>
               </div>

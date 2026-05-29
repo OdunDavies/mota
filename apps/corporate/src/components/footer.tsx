@@ -27,12 +27,12 @@ export function Footer() {
             <h4 className="text-sm font-semibold tracking-wide mb-4">Subsidiaries</h4>
             <ul className="space-y-3">
               <li>
-                <Link href={siteConfig.links.automotive} className="text-sm text-white/50 hover:text-gold-400 transition-colors">
+                <Link href={siteConfig.links.automotive} target="_blank" rel="noopener noreferrer" className="text-sm text-white/50 hover:text-gold-400 transition-colors">
                   Automotive
                 </Link>
               </li>
               <li>
-                <Link href={siteConfig.links.interiors} className="text-sm text-white/50 hover:text-gold-400 transition-colors">
+                <Link href={siteConfig.links.interiors} target="_blank" rel="noopener noreferrer" className="text-sm text-white/50 hover:text-gold-400 transition-colors">
                   Interiors
                 </Link>
               </li>

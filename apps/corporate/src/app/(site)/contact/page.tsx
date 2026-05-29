@@ -55,7 +55,7 @@ export default function ContactPage() {
               <Badge variant="gold" className="mb-4">Contact Information</Badge>
               <div className="space-y-6">
                 {[
-                  { icon: '📍', title: 'Head Office', detail: '10 Bishop Aboyade Cole Street\nVictoria Island, Lagos, Nigeria' },
+                  { icon: '📍', title: 'Head Office', detail: 'Olusegun Obasanjo Way\nCentral Business District, Abuja 900103, FCT' },
                   { icon: '📞', title: 'Phone', detail: '+234 800 SARKIMOTA\n+234 800 727 5468' },
                   { icon: '✉️', title: 'Email', detail: 'info@sarkimota.com\ncareers@sarkimota.com' },
                   { icon: '🕐', title: 'Business Hours', detail: 'Monday - Friday: 8:00 AM - 6:00 PM\nSaturday: 9:00 AM - 4:00 PM' },

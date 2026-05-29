@@ -63,7 +63,7 @@ export default async function SubsidiariesPage() {
                         </div>
                       ))}
                     </div>
-                    <Link href={href}>
+                    <Link href={href} target="_blank" rel="noopener noreferrer">
                       <Button variant="gold">Visit {sub.name.split(' ')[1]}</Button>
                     </Link>
                   </div>

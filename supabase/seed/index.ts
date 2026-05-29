@@ -48,9 +48,9 @@ async function seed() {
         email: 'info@sarkimota.com',
         phone: '+234 800 SARKIMOTA',
         address: {
-          line1: '10 Bishop Aboyade Cole Street',
-          city: 'Victoria Island',
-          state: 'Lagos',
+          line1: 'Olusegun Obasanjo Way',
+          city: 'Central Business District',
+          state: 'Abuja',
           country: 'Nigeria',
         },
       },

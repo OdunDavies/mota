@@ -28,7 +28,7 @@ export default function ContactPage() {
               <Badge variant="gold" className="mb-4">Contact Information</Badge>
               <div className="space-y-6">
                 {[
-                  { icon: '📍', title: 'Studio', detail: '10 Bishop Aboyade Cole Street\nVictoria Island, Lagos' },
+                  { icon: '📍', title: 'Studio', detail: 'Olusegun Obasanjo Way\nCentral Business District, Abuja 900103, FCT' },
                   { icon: '📞', title: 'Phone', detail: '+234 800 SARKI INTERIOR\n+234 800 727 5468' },
                   { icon: '✉️', title: 'Email', detail: 'interiors@sarkimota.com' },
                   { icon: '🕐', title: 'Hours', detail: 'Mon - Fri: 8AM - 6PM\nSat: 9AM - 4PM' },

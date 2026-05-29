@@ -9,7 +9,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 INSERT INTO company_info (key, value) VALUES
   ('about', '{"foundingYear":2010,"headquarters":"Abuja, Nigeria","mission":"To redefine excellence across industries.","vision":"To be Africa''s most admired holding company."}'),
-  ('contact', '{"email":"info@sarkimota.com","phone":"+234 800 SARKIMOTA","address":{"line1":"10 Bishop Aboyade Cole Street","city":"Victoria Island","state":"Lagos","country":"Nigeria"}}'),
+  ('contact', '{"email":"info@sarkimota.com","phone":"+234 800 SARKIMOTA","address":{"line1":"Olusegun Obasanjo Way","city":"Central Business District","state":"Abuja","country":"Nigeria"}}'),
   ('social', '{"instagram":"@sarkimotagroup","twitter":"@sarkimotagroup","linkedin":"sarkimota-group"}')
 ON CONFLICT (key) DO NOTHING;
 
