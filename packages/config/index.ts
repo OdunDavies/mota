@@ -6,10 +6,10 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://sarkimota.com',
   ogImage: '/og-image.jpg',
   links: {
-    corporate: process.env.NEXT_PUBLIC_CORPORATE_URL ?? 'https://sarkimota.com',
-    automotive: process.env.NEXT_PUBLIC_AUTOMOTIVE_URL ?? 'https://auto.sarkimota.com',
-    interiors: process.env.NEXT_PUBLIC_INTERIORS_URL ?? 'https://interiors.sarkimota.com',
-    admin: process.env.NEXT_PUBLIC_ADMIN_URL ?? 'https://admin.sarkimota.com',
+    corporate: process.env.NEXT_PUBLIC_CORPORATE_URL ?? 'https://corporate-peach-mu.vercel.app',
+    automotive: process.env.NEXT_PUBLIC_AUTOMOTIVE_URL ?? 'https://automotive-psi.vercel.app',
+    interiors: process.env.NEXT_PUBLIC_INTERIORS_URL ?? 'https://interiors-jet.vercel.app',
+    admin: process.env.NEXT_PUBLIC_ADMIN_URL ?? 'https://admin-red-seven.vercel.app',
   },
 } as const;
 
