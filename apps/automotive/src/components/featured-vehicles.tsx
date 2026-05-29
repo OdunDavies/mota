@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Container, Section, Button, Badge } from '@sarkimota/ui';
+import { Container, Section, Button, Badge, AnimatedText } from '@sarkimota/ui';
 import Link from 'next/link';
 
 function formatCurrency(amount: number): string {
@@ -15,7 +15,7 @@ export function FeaturedVehicles({ vehicles = [] }: { vehicles: Array<{ slug: st
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-12">
           <div>
             <Badge variant="gold" className="mb-4">Featured Inventory</Badge>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight">Exceptional Vehicles</h2>
+            <AnimatedText text="Exceptional Vehicles" as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight" />
             <p className="mt-2 text-muted-foreground">Hand-selected for the discerning driver.</p>
           </div>
           <Link href="/inventory">
@@ -34,11 +34,12 @@ export function FeaturedVehicles({ vehicles = [] }: { vehicles: Array<{ slug: st
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="group rounded-2xl border border-border/50 bg-card overflow-hidden transition-all duration-300 hover:shadow-lg"
+                  whileHover={{ scale: 1.03, boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }}
+                  className="group rounded-2xl border border-border/50 bg-card overflow-hidden"
                 >
                   <div className="aspect-[4/3] relative overflow-hidden">
                     <div
-                      className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                      className="absolute inset-0 bg-cover bg-center"
                       style={{ backgroundImage: `url(${image})` }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />

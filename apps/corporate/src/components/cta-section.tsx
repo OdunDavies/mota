@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Container, Button } from '@sarkimota/ui';
+import { Container, Button, AnimatedText } from '@sarkimota/ui';
 import Link from 'next/link';
 
 export function CTASection() {
@@ -21,9 +21,7 @@ export function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white tracking-tight">
-            Ready to Experience Excellence?
-          </h2>
+          <AnimatedText text="Ready to Experience Excellence?" as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white tracking-tight" />
           <p className="mt-6 text-lg text-white/50 max-w-xl mx-auto leading-relaxed">
             Whether you&apos;re seeking the perfect vehicle or a space that inspires,
             we&apos;re here to exceed your expectations.

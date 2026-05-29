@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Container, Section, Badge } from '@sarkimota/ui';
+import { Container, Section, Badge, AnimatedText } from '@sarkimota/ui';
 
 const milestones = [
   { year: '2010', title: 'Founded', description: 'SarkiMota Group established in Lagos, Nigeria with a vision to redefine premium experiences.' },
@@ -23,9 +23,7 @@ export function TimelineSection() {
           className="text-center mb-16"
         >
           <Badge variant="gold" className="mb-4">Our Journey</Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight">
-            A Legacy in the Making
-          </h2>
+          <AnimatedText text="A Legacy in the Making" as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight" />
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             From vision to reality — the milestones that shaped our story.
           </p>

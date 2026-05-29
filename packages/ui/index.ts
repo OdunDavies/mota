@@ -20,3 +20,5 @@ export { AnimatedText } from './src/components/animated-text';
 export { MotionDiv } from './src/components/motion-div';
 export { NavigationMenu } from './src/components/navigation-menu';
 export { PageHeader } from './src/components/page-header';
+export { AnimatedSection, AnimatedGrid, AnimatedCard } from './src/components/animated-section';
+export { fadeUp, fadeIn, staggerContainer, staggerItem, heroHeading, slideUp, cardHover, pageTransition } from './src/animation-variants';

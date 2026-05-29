@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Container, Section, Badge } from '@sarkimota/ui';
+import { Container, Section, Badge, AnimatedText } from '@sarkimota/ui';
 
 const iconMap: Record<string, string> = {
   'residential-design': '🏠', 'commercial-interiors': '🏢',
@@ -14,7 +14,7 @@ export function ServicesSection({ services = [] }: { services: Array<{ slug: str
       <Container>
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
           <Badge variant="gold" className="mb-4">Our Services</Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight">Comprehensive Design Solutions</h2>
+          <AnimatedText text="Comprehensive Design Solutions" as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight" />
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">From concept to completion, we bring your vision to life.</p>
         </motion.div>
 

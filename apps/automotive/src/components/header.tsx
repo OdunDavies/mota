@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { cn } from '@sarkimota/utils';
 import { Container, NavigationMenu, Button } from '@sarkimota/ui';
+import { siteConfig } from '@sarkimota/config';
 import Link from 'next/link';
 
 const navItems = [
@@ -47,6 +48,13 @@ export function Header() {
           <NavigationMenu items={navItems} variant={scrolled ? 'light' : 'dark'} />
 
           <div className="hidden lg:flex items-center gap-3">
+            <Link href={siteConfig.links.corporate} className={cn(
+              'text-xs font-medium tracking-wide transition-colors',
+              scrolled ? 'text-sarkimota-black/50 hover:text-sarkimota-black' : 'text-white/50 hover:text-white',
+            )}>
+              SarkiMota Group
+            </Link>
+            <span className={cn('text-xs', scrolled ? 'text-sarkimota-black/20' : 'text-white/20')}>|</span>
             <a href="tel:+2348007275468" className={cn(
               'text-sm font-medium transition-colors',
               scrolled ? 'text-sarkimota-black' : 'text-white/80 hover:text-white',

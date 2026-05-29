@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Container, Section, Badge } from '@sarkimota/ui';
+import { Container, Section, Badge, AnimatedText } from '@sarkimota/ui';
 
 export function TestimonialSection({ testimonials = [] }: { testimonials: Array<{ id: string; client_name: string; client_title: string | null; content: string }> }) {
   return (
@@ -14,9 +14,7 @@ export function TestimonialSection({ testimonials = [] }: { testimonials: Array<
           className="text-center mb-16"
         >
           <Badge variant="gold" className="mb-4">Testimonials</Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight">
-            Trusted by Discerning Clients
-          </h2>
+          <AnimatedText text="Trusted by Discerning Clients" as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight" />
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">

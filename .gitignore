@@ -11,3 +11,6 @@ turbo/
 .DS_Store
 .cache/
 out/
+
+.vercel
+.env*

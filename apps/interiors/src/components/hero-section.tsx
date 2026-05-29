@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Container, Button } from '@sarkimota/ui';
+import { Container, Button, AnimatedText } from '@sarkimota/ui';
 import Link from 'next/link';
 
 export function HeroSection() {
@@ -15,7 +15,11 @@ export function HeroSection() {
           <span className="inline-flex items-center rounded-full border border-gold-400/30 bg-gold-400/10 px-4 py-1.5 text-xs font-medium text-gold-400 mb-8">Premium Interior Design</span>
         </motion.div>
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold text-white leading-[1.05] tracking-tight">
-          Where Space<br /><span className="gold-gradient">Becomes Statement</span>
+          <AnimatedText text="Where Space" as="span" className="inline" delay={0.2} />
+          <br />
+          <span className="gold-gradient">
+            <AnimatedText text="Becomes Statement" as="span" className="inline" delay={0.35} />
+          </span>
         </motion.h1>
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="mt-8 text-lg sm:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
           Transforming spaces into expressions of luxury, comfort, and sophisticated living across Nigeria.

@@ -8,7 +8,7 @@ VALUES
 ON CONFLICT (slug) DO NOTHING;
 
 INSERT INTO company_info (key, value) VALUES
-  ('about', '{"foundingYear":2010,"headquarters":"Lagos, Nigeria","mission":"To redefine excellence across industries.","vision":"To be Africa''s most admired holding company."}'),
+  ('about', '{"foundingYear":2010,"headquarters":"Abuja, Nigeria","mission":"To redefine excellence across industries.","vision":"To be Africa''s most admired holding company."}'),
   ('contact', '{"email":"info@sarkimota.com","phone":"+234 800 SARKIMOTA","address":{"line1":"10 Bishop Aboyade Cole Street","city":"Victoria Island","state":"Lagos","country":"Nigeria"}}'),
   ('social', '{"instagram":"@sarkimotagroup","twitter":"@sarkimotagroup","linkedin":"sarkimota-group"}')
 ON CONFLICT (key) DO NOTHING;
@@ -28,5 +28,10 @@ FROM subsidiaries WHERE slug = 'interiors';
 INSERT INTO services (subsidiary_id, name, slug, description, sort_order)
 SELECT id, 'Commercial Interiors', 'commercial-interiors', 'Office and retail design', 2
 FROM subsidiaries WHERE slug = 'interiors';
+
+INSERT INTO leadership (name, title, bio, image_url, subsidiary_id, sort_order)
+VALUES
+  ('SarkinMota', 'Chief Executive Officer', 'Visionary leader driving excellence across industries with a focus on innovation and quality.', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop', NULL, 1)
+ON CONFLICT DO NOTHING;
 
 COMMIT;

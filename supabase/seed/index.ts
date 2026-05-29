@@ -37,9 +37,9 @@ async function seed() {
       key: 'about',
       value: {
         foundingYear: 2010,
-        headquarters: 'Lagos, Nigeria',
+        headquarters: 'Abuja, Nigeria',
         mission: 'To redefine excellence across industries through innovation, quality, and an uncompromising commitment to premium experiences.',
-        vision: 'To be Africa\'s most admired holding company, setting global standards for luxury and service.',
+        vision: "To be Africa's most admired holding company, setting global standards for luxury and service.",
       },
     },
     {
@@ -67,6 +67,20 @@ async function seed() {
   ]);
 
   console.log('Seeded company info');
+
+  // Seed leadership
+  await supabase.from('leadership').upsert([
+    {
+      name: 'SarkinMota',
+      title: 'Chief Executive Officer',
+      bio: 'Visionary leader driving excellence across industries with a focus on innovation and quality.',
+      image_url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop',
+      subsidiary_id: null,
+      sort_order: 1,
+    },
+  ]);
+
+  console.log('Seeded leadership');
 }
 
 seed()

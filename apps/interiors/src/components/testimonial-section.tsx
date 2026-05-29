@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Container, Section, Badge } from '@sarkimota/ui';
+import { Container, Section, Badge, AnimatedText } from '@sarkimota/ui';
 
 export function TestimonialSection({ testimonials = [] }: { testimonials: Array<{ id: string; client_name: string; client_title: string | null; content: string }> }) {
   return (
@@ -9,7 +9,7 @@ export function TestimonialSection({ testimonials = [] }: { testimonials: Array<
       <Container>
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
           <Badge variant="gold" className="mb-4">Testimonials</Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight">What Our Clients Say</h2>
+          <AnimatedText text="What Our Clients Say" as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight" />
         </motion.div>
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((t, i) => (

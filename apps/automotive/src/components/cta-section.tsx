@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Container, Button } from '@sarkimota/ui';
+import { Container, Button, AnimatedText } from '@sarkimota/ui';
 import Link from 'next/link';
 
 export function CTASection() {
@@ -11,7 +11,7 @@ export function CTASection() {
       <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, rgba(201,169,110,0.15) 0%, transparent 70%)' }} />
       <Container className="relative text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white tracking-tight">Ready to Drive Excellence?</h2>
+          <AnimatedText text="Ready to Drive Excellence?" as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white tracking-tight" />
           <p className="mt-6 text-lg text-white/50 max-w-xl mx-auto leading-relaxed">Schedule a viewing or consultation with our team today.</p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/contact"><Button variant="gold" size="lg">Contact Sales</Button></Link>

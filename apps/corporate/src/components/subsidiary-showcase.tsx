@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Container, Section, Button, Badge } from '@sarkimota/ui';
+import { Container, Section, Button, Badge, AnimatedText } from '@sarkimota/ui';
+import { siteConfig } from '@sarkimota/config';
 import Link from 'next/link';
 
 const subsidiaries = [
@@ -9,7 +10,7 @@ const subsidiaries = [
     name: 'SarkiMota Automotive',
     tagline: 'Luxury Redefined on Every Road',
     description: 'Premium automotive sales, financing, and aftermarket services. We bring the world\'s finest automotive brands to Nigeria with an uncompromising commitment to quality and service.',
-    href: 'https://automotive.sarkimota.com',
+    href: siteConfig.links.automotive,
     image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2000&auto=format&fit=crop',
     features: ['Luxury Vehicle Sales', 'Financing Solutions', 'Aftermarket Services', 'Certified Pre-Owned'],
   },
@@ -17,7 +18,7 @@ const subsidiaries = [
     name: 'SarkiMota Interiors',
     tagline: 'Where Space Becomes Statement',
     description: 'Premium interior design, fit-out, and lifestyle solutions. We transform spaces into expressions of luxury, comfort, and sophisticated living.',
-    href: 'https://interiors.sarkimota.com',
+    href: siteConfig.links.interiors,
     image: 'https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=2000&auto=format&fit=crop',
     features: ['Residential Design', 'Commercial Interiors', 'Consultation Services', 'Project Management'],
   },
@@ -34,9 +35,7 @@ export function SubsidiaryShowcase() {
           className="text-center mb-16"
         >
           <Badge variant="gold" className="mb-4">Our Companies</Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight">
-            Excellence Across Industries
-          </h2>
+          <AnimatedText text="Excellence Across Industries" as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight" />
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             Two distinctly premium subsidiaries, united by a single standard of excellence.
           </p>

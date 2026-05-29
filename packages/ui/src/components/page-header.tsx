@@ -1,4 +1,7 @@
+'use client';
+
 import { cn } from '@sarkimota/utils';
+import { motion } from 'framer-motion';
 import { Container } from './container';
 
 interface PageHeaderProps {
@@ -24,16 +27,26 @@ export function PageHeader({
     <div className={cn('py-20 sm:py-28 lg:py-36', variantClasses[variant], className)}>
       <Container>
         <div className="max-w-3xl">
-          <h1 className="text-4xl font-display font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            className="text-4xl font-display font-bold tracking-tight sm:text-5xl lg:text-6xl"
+          >
             {title}
-          </h1>
+          </motion.h1>
           {description && (
-            <p className={cn(
-              'mt-6 text-lg leading-relaxed max-w-2xl',
-              variant === 'dark' ? 'text-white/70' : 'text-muted-foreground',
-            )}>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.15, ease: 'easeOut' }}
+              className={cn(
+                'mt-6 text-lg leading-relaxed max-w-2xl',
+                variant === 'dark' ? 'text-white/70' : 'text-muted-foreground',
+              )}
+            >
               {description}
-            </p>
+            </motion.p>
           )}
         </div>
       </Container>

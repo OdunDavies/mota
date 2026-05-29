@@ -1,6 +1,7 @@
 'use client';
 
 import { cn } from '@sarkimota/utils';
+import { siteConfig } from '@sarkimota/config';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { BarChart3, Car, Building2, Mail, TrendingUp, Settings, User, LogOut } from 'lucide-react';
@@ -56,6 +57,17 @@ export function Sidebar() {
           );
         })}
       </nav>
+
+      <div className="px-4 pt-2 border-t border-border">
+        <Link
+          href={siteConfig.links.corporate}
+          target="_blank"
+          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-muted-foreground hover:bg-sidebar-muted hover:text-foreground transition-all"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+          Visit Corporate Site
+        </Link>
+      </div>
 
       <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-border">
         <div className="flex items-center gap-3 px-3 py-2">

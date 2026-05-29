@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Container, Button } from '@sarkimota/ui';
+import { Container, Button, AnimatedText } from '@sarkimota/ui';
 import Link from 'next/link';
 
 export function HeroSection() {
@@ -39,9 +39,21 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
           className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold text-white leading-[1.05] tracking-tight"
         >
-          SarkiMota
+          <AnimatedText
+            text="SarkiMota"
+            as="span"
+            className="inline"
+            delay={0.2}
+          />
           <br />
-          <span className="gold-gradient">Group of Companies</span>
+          <span className="gold-gradient">
+            <AnimatedText
+              text="Group of Companies"
+              as="span"
+              className="inline gold-gradient"
+              delay={0.4}
+            />
+          </span>
         </motion.h1>
 
         <motion.p
